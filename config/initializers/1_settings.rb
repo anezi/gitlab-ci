@@ -7,6 +7,7 @@ end
 #
 # GitlabCi
 #
+Settings['site_title'] ||= 'Gitlab CI'
 Settings['gitlab_ci'] ||= Settingslogic.new({})
 Settings.gitlab_ci['https'] = false if Settings.gitlab_ci['https'].nil?
 
