@@ -3,7 +3,7 @@
     .alert.alert-error
       = @error
   %div.control-group
-    = f.label :email, GitlabCi.config.gitlab_site_title + ' Email or Login',class: 'control-label'
+    = f.label :email, 'Email or Login',class: 'control-label'
     .controls= f.text_field :email
   %div.control-group
     = f.label :password, class: 'control-label'
