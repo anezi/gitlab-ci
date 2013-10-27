@@ -1,0 +1,18 @@
+= content_for :title do
+  %h3.project-title
+    %span.light Admin /
+    Projects (#{@projects.total_count})
+
+%table.table
+  %tr
+    %th ID
+    %th Name
+    %th Last build
+    %th Access
+    %th Builds
+    %th
+
+  = render @projects
+
+= paginate @projects
+

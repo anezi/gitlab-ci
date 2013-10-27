@@ -1,9 +1,14 @@
-class RunnersController < ApplicationController
+class Admin::RunnersController < Admin::ApplicationController
   before_filter :authenticate_user!
   before_filter :runner, except: :index
 
   def index
     @runners = Runner.page(params[:page]).per(30)
+  end
+
+  def show
+    @runner = Runner.find(params[:id])
+    @builds = @runner.builds.order('id DESC').first(30)
   end
 
   def update

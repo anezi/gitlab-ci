@@ -265,3 +265,41 @@ td form {
     text-decoration: none;
   }
 }
+
+.label {
+  font-weight: normal;
+  padding: 2px 5px;
+}
+
+.runner-builds {
+  .build-message {
+    display: none;
+  }
+}
+
+.restrict-projects-list {
+  form {
+    margin: 0;
+  }
+}
+
+.project-menu {
+  a {
+    padding: 10px !important;
+  }
+}
+
+.profile-block {
+  font-size: 14px;
+}
+
+.login-form {
+  .btn-success {
+    padding: 10px 20px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 8px 14px;
+  }
+}

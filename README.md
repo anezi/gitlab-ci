@@ -1,11 +1,11 @@
-# GitLab CI is an open-source continuous integration server
+## GitLab CI is an open-source continuous integration server
 
 * [![build status](https://secure.travis-ci.org/gitlabhq/gitlab-ci.png)](https://travis-ci.org/gitlabhq/gitlab-ci)
 * [![Code Climate](https://codeclimate.com/github/gitlabhq/gitlab-ci.png)](https://codeclimate.com/github/gitlabhq/gitlab-ci)
 * [![Dependency Status](https://gemnasium.com/gitlabhq/gitlab-ci.png)](https://gemnasium.com/gitlabhq/gitlab-ci)
 * [![Coverage Status](https://coveralls.io/repos/gitlabhq/gitlab-ci/badge.png?branch=master)](https://coveralls.io/r/gitlabhq/gitlab-ci)
 
-![Screen](https://github.com/downloads/gitlabhq/gitlab-ci/gitlab_ci_preview.png)
+![Screen](https://raw.github.com/gitlabhq/gitlab-ci/master/public/gitlab-ci-screenshot.png)
 
 ### Requirements
 
@@ -61,14 +61,19 @@ and
 
 * [Installation guide](https://github.com/gitlabhq/gitlab-ci/blob/master/doc/installation.md)
 
+
+### Docs
+
+* [API](doc/api.md)
+
 ### How to add a new project to GitLab CI
 
 1. Log in the GitLab CI web interface
 2. Press the 'Sync now' button
 3. Select your project with the 'Add' button
-4. Go the the Integration page and do the 'Complete (as service)' steps
-5. Go to the settings page to add a build script (see below for an example)
-6. Push a new commit to the project
+4. Go to the settings page of the project and add a build script (example given below)
+5. Go the the Integration page and do the 'Complete (as service)' steps, the press 'Test settings'
+6. A new build should become visible on the project page of GitLab CI
 7. If the build fails then adjust the build script and press the 'Retry' button on the build page
 8. If the build is green you are done, all new commits will be tested and you see the status of merge requests builds within GitLab
 

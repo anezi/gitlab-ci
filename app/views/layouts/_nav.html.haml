@@ -3,17 +3,20 @@
     .container-fluid
       = link_to GitlabCi.config.site_title, root_path, class: "brand"
       %ul.nav
-        - if current_user
+        - if current_user && current_user.is_admin
           %li
-            = link_to runners_path do
+            = link_to admin_runners_path do
               Runners
+          %li
+            = link_to admin_projects_path do
+              Projects
       %ul.nav.pull-right
         - if current_user
           %li
             = link_to user_sessions_path do
               .profile-holder
                 = image_tag gravatar_icon(current_user.email, 24)
-                %span= current_user.email
+                %span= current_user.name
           %li
             = link_to user_sessions_path, class: "logout", method: :delete do
               %i.icon-signout
