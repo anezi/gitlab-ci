@@ -1,4 +1,5 @@
 defaults: &defaults
+  site_title: Gitlab CI
   allowed_gitlab_urls: 
     - 'https://dev.gitlab.org/'
     - 'https://staging.gitlab.org/'
