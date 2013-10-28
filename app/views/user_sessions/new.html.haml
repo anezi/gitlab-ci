@@ -1,6 +1,5 @@
 .login-box
-  %h3
-    = 'Sign in with ' + GitlabCi.config.gitlab.site_title + 'account'
+  %h3 Sign in with #{GitlabCi.config.gitlab_site_title} account
   %hr
   .login-form
     = render 'form'
