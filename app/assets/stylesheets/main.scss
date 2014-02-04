@@ -11,6 +11,7 @@ $style_color: #289;
 body {
   color:#444;
   font-size: 13px;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -339,4 +340,8 @@ h3 {
     top: -2px;
     left: 4px;
   }
+}
+
+#project_scripts {
+  font-family: monospace;
 }

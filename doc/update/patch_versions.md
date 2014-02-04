@@ -1,6 +1,4 @@
-# Update from 3.2 to 4.0
-
-## GitLab CI 4.0 requires GitLab 6.3 or higher
+# Universal update guide for patch versions. For example from 4.0.0 to 4.0.1, also see the [semantic versioning specification](http://semver.org/).
 
 ### 1. stop CI server
 
@@ -16,8 +14,7 @@ cd /home/gitlab_ci/gitlab-ci
 ### 3. get latest code
 
 ```
-git fetch
-git checkout 4-0-stable
+git pull origin STABLE_BRANCH
 ```
 
 ### 4. Install libs, migrations etc
@@ -25,11 +22,8 @@ git checkout 4-0-stable
 ```
 bundle install --without development test --deployment
 bundle exec rake db:migrate RAILS_ENV=production
-bundle exec whenever -w
 ```
 
 ### 5. Start web application
 
     sudo service gitlab_ci start
-
-### 6. Update your runners to version 4.0
