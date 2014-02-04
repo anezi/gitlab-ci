@@ -53,5 +53,8 @@ module GitlabCi
     config.assets.version = '1.0'
 
     config.active_record.whitelist_attributes = false
+    
+    # For relative url root
+    #config.relative_url_root = "/gitlab_ci"
   end
 end
